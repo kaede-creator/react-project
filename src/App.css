@@ -9,6 +9,10 @@ body{
   font-family: 'Kiwi Maru', serif;
 }
 
+main{
+  padding: 50px;
+}
+
 .App {
   text-align: center;
 }
@@ -46,4 +50,19 @@ body{
   to {
     transform: rotate(360deg);
   }
+}
+
+.others_wrap ul,
+.bookIndex_wrap ul{
+  padding-left: 30px;
+}
+
+.others_wrap li,
+.bookIndex_wrap li{
+  list-style: auto;
+}
+
+.others_wrap li a:hover,
+.bookIndex_wrap li a:hover{
+  color: var(--main-color);
 }

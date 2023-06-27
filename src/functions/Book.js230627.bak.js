@@ -1,8 +1,7 @@
 const books = [
-    {id:1,title:"人間椅子"},
-    {id:2,title:"羅生門"},
-    {id:3,title:"注文の多い料理店"},
-    {id:4,title:"虚談 - レシピ"},
+    {id:1,title:"本のタイトル１"},
+    {id:2,title:"本のタイトル2"},
+    {id:3,title:"本のタイトル3"},
 ]
 
 export const getBooks = () => books

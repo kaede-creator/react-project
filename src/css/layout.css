@@ -8,7 +8,7 @@ header, footer{
 
 header nav,
 footer nav{
-    width: 80%;
+    width: 30%;
     margin: 0 auto;
 }
 
@@ -24,6 +24,7 @@ footer li a{
     padding: 10px;
     position: relative;
     margin: 5px 0 10px;
+    text-align: center;
 }
 
 header li a.active:before,
@@ -71,3 +72,10 @@ footer{
     width: 100%;
     bottom: 0;
 }
+
+@media (max-width:600px) { 
+    header nav,
+    footer nav{
+        width: 95%;
+    }
+ }

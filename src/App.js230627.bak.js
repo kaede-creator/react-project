@@ -15,8 +15,6 @@ import BookList from './pages/BookList';
 import BookDetail from './pages/BookDetail';
 import MotionIndex from './motion/index';
 import { motion } from 'framer-motion';
-import Others from './pages/Others';
-
 <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet"></link>
 
 function App() {
@@ -34,13 +32,15 @@ function App() {
       <Routes>
       {/* Layoutファイルからリンクを呼び出し */}
       {/* Header */}
-      {/* カレントのページの場合のcss付与 */}
         <Route element={<Layout />}>
-          {/* <Route index element={<Home />} />  */}
-          <Route path="/react-project" element={<Home />} />
-          <Route path="/book-list" element={<BookList />} />
-          <Route path="/others" element={<Others  />} />
+          <Route index element={<Home />} /> 
+          <Route path="/information" element={<Information />} />
+          <Route path="/contact" element={<Contact  />} />
+
+          {/* main */}
           <Route path="/auth" element={isAuthenticated ? <Navigate to="/contact" /> : <Home /> } />
+
+          {/* Footer */}
           <Route path="/book-list" element={<BookList />}>
             <Route index element={<BookIndex/>} />
             <Route path=":id" element={<BookDetail />} />
@@ -48,7 +48,6 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
-      <BookList />
 
       {/* <MotionIndex /> */}
    {/* <div className="border border-gray-400 rounded-2xl p-2 m-2 flex justify-around items-center">
