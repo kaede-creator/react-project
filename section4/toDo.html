@@ -29,7 +29,7 @@
       const [item, setItem] = useState('')
       // ダミーデータいれておく。
       const [todos, setTodo] = useState([
-        {item:'あああ', isDone:false}
+        {item:'項目1', isDone:false}
       ])
 
       // todo追加用の関数を作成
@@ -82,7 +82,7 @@
       return(<>
        {/*eを引数に入れて、inputを変更したときにだけイベントが走る  */} 
        {/* setItemで現在地を取得して更新する*/} 
-      <input type="text" value={item} onChange={e=>setItem( item => item = e.target.value)} />
+      <input type="text" value={item} onChange={e=>setItem( item => item = e.target.value)} className="border-black"/>
       <button onClick={addItem}>追加</button>
       <ul>
         {/* map()の中にコールバック関数を入れる。これでtodoを取り出せる*/}
