@@ -5,7 +5,7 @@ const Others= () => {
   return (<>
     <Outlet />
     <div className='others_wrap'>
-      <p>その他のreactで制作したアプリケーションは下記の通りです。</p>
+      <p>その他のreactで制作したアプリケーションは以下の通りです。</p>
       <ul className='my-4'>
         <li className='my-2'>
           <a href="/section5/dogApi.html">犬の画像取得API</a>

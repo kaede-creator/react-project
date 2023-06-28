@@ -6,7 +6,7 @@ const BookIndex = () => {
 
   return (<>
   <div className='bookIndex_wrap'>
-    <p>最近読んだ小説一覧です。</p>
+    <p>最近読んだ小説一覧です。<br />「作品名は聞いたことがあるのに、読んだことがないな？」と思い至り、最近読み始めるようになりました。</p>
     <ul className='my-4'>
         { books.map( book => (
           <li className='my-2'>
