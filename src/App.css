@@ -3,6 +3,7 @@
 :root{
   --main-color:#8CBEB2;
   --white-color: #ffffff;
+  --sub-1-color:#f0fdfa;
 }
 
 body{
@@ -11,6 +12,8 @@ body{
 
 main{
   padding: 50px;
+  width: 1000px;
+  margin: 0 auto;
 }
 
 .App {
@@ -53,7 +56,8 @@ main{
 }
 
 .others_wrap ul,
-.bookIndex_wrap ul{
+.bookIndex_wrap ul,
+.top_wrap ul{
   padding-left: 30px;
 }
 
@@ -63,6 +67,15 @@ main{
 }
 
 .others_wrap li a:hover,
-.bookIndex_wrap li a:hover{
+.bookIndex_wrap li a:hover,
+.top_wrap li a:hover{
   color: var(--main-color);
+}
+
+.top_sub_wrap{
+  background: var(--sub-1-color);
+  box-shadow: 1px 1px 4px 1px #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  width: 70%;
 }
