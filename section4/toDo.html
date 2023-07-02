@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    ul { list-style: none; }
+    .done { text-decoration: line-through; }
+
+    a:hover{
+      color: #8CBEB2;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  
+  <script type="text/babel">
+    const container = document.getElementById('app')
+    const root = ReactDOM.createRoot(container)
+
+    // コンポーネントを作成。これが一つの機能として呼び出される。
+    const TodoList = () => {
+      // アイテムとuseStateを呼び出して用意。
+      const useState = React.useState
+      // 初期値を設定
+      const [item, setItem] = useState('')
+      // ダミーデータいれておく。
+      const [todos, setTodo] = useState([
+        {item:'項目1', isDone:false}
+      ])
+
+      // todo追加用の関数を作成
+      const addItem = () =>{
+        // itemが空だったら処理を終了させる
+        if(!item) {
+          confirm("値を入力してください")
+          return
+        }
+        
+
+        // itemとisDoneの情報をそれぞれ持たせたオブジェクトを作る
+        // jsはキーと値が同じ値の場合は「item」のように一つだけの指定でもOKらしい
+        const newTodo = {
+          // useStateのstate変数
+          item,
+          isDone:false
+        }
+
+        // 更新用関数を作る。ダミーデータの展開と新しいtodoをセット
+        setTodo([
+          ...todos,
+          newTodo
+        ])
+        // setItemを空にする
+        setItem('')
+      }
+
+      // 配列の何番目が削除されるかデータがわたってくる（todo変数の中のインデックス）ため、見分けるためにidと記載
+      const deleteItem = id =>{
+        // 新しい配列を作る。todo変数の中のインデックスを取得
+        // 渡されたデータがidと一致したら消す、違ったら追加する
+        const newList = todos.filter((todo, index) => id !== index ? todo :null)
+        setTodo(newList)
+      }
+
+      const handleChange = (id, e) => {
+        const newList = todos.filter((todo, index) => {
+          if(id === index){
+            todo.isDone = e.target.checked
+            return todo
+          } else {
+            return todo
+          }
+        })
+
+        setTodo(newList)
+      }
+
+      return(<>
+      <div className="p-28">
+        {/*eを引数に入れて、inputを変更したときにだけイベントが走る  */} 
+        {/* setItemで現在地を取得して更新する*/} 
+        <input type="text" value={item} onChange={e=>setItem( item => item = e.target.value)} className="border-gray-800 border-solid border p-2 rounded-md" placeholder="項目名を入力してください"/>
+        <button onClick={addItem} className="p-2 ml-4 bg-gray-300 rounded-md">追加</button>
+        <ul className="my-4">
+          {/* map()の中にコールバック関数を入れる。これでtodoを取り出せる*/}
+          {/* 配列を入れるわけではないので()で囲む*/}
+          { todos.map(( todo, index ) => (
+            <li>
+                <input type="checkbox" checked={todo.isDone} onChange={ e => handleChange(index, e) } className="m-2 p-1" />
+                <span className={todo.isDone && 'done'}>{todo.item}</span>
+              {/* どのキーを消すのか指定する↓*/}
+              <button className="m-2 p-2 bg-red-500 text-white rounded-md" onClick={()=>deleteItem(index)}>削除</button>
+            </li>
+            ))}
+        </ul>
+        <a href="/react-project">TOPへ戻る</a>
+      </div>
+      </>)
+    }
+
+    // コンポーネントをよびだし
+    root.render(<>
+    <TodoList />
+    </>)
+  </script>
+
+</body>
+</html>
