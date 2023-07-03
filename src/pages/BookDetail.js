@@ -10,7 +10,7 @@ const BookDetail = (props) => {
   // const text = comment.replace(/\n/g, '<br>')
   return (
     <>
-     <p className='mb-2'>タイトル: {book.title} </p>
+     <p className='mb-2'>題名: {book.title} </p>
      <p style={{whiteSpace: 'pre-line'}}>{book.comment} </p>
      <a href='/react-project'>TOPへ</a>
      {/* <button onClick={() => this.props.history.goBack()}>戻る</button> */}
