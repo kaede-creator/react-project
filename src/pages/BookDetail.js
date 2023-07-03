@@ -18,8 +18,4 @@ const BookDetail = (props) => {
   )
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 79a464740488d3dc22b7cf8a13a129c0735cbef2
 export default BookDetail
