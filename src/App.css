@@ -68,6 +68,7 @@ main{
 
 .others_wrap li a:hover,
 .bookIndex_wrap li a:hover,
+.bookIndex_wrap a:hover,
 .top_wrap li a:hover{
   color: var(--main-color);
 }
