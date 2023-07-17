@@ -16,7 +16,8 @@ import BookDetail from './pages/BookDetail';
 import MotionIndex from './motion/index';
 import { motion } from 'framer-motion';
 import Others from './pages/Others';
-import BookDetail from './pages/ReactNote';
+import ReactNote from './pages/ReactNote';
+import ReactMarkDown from './pages/ReactMarkDown';
 
 <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet"></link>
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/react-project" element={<Home />} />
           <Route path="/book-list" element={<BookList />} />
           <Route path="/react-note" element={<ReactNote />} />
+          <Route path="/react-markDown" element={<ReactMarkDown />} />
           <Route path="/others" element={<Others  />} />
           <Route path="/auth" element={isAuthenticated ? <Navigate to="/contact" /> : <Home /> } />
           <Route path="/book-list" element={<BookList />}>
