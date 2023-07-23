@@ -8,7 +8,7 @@ const Layout = () =>{
                 <ul className="flex justify-between">
                 <li><NavLink to="/react-project">Top</NavLink></li>
                 <li><NavLink to="/book-list">Books</NavLink></li>
-                <li><NavLink to="/react-note">Note</NavLink></li>
+                {/* <li><NavLink to="/react-note">Note</NavLink></li> */}
                 <li><NavLink to="/react-markDown">ReactMarkDown</NavLink></li>
                 <li><NavLink to="/others">Others</NavLink></li>
                 </ul>
@@ -22,7 +22,7 @@ const Layout = () =>{
                 <ul className="flex justify-between">
                 <li><NavLink to="/react-project">Top</NavLink></li>
                 <li><NavLink to="/book-list">Books</NavLink></li>
-                <li><NavLink to="/react-note">Note</NavLink></li>
+                {/* <li><NavLink to="/react-note">Note</NavLink></li> */}
                 <li><NavLink to="/react-markDown">ReactMarkDown</NavLink></li>
                 <li><NavLink to="/others">Others</NavLink></li>
                 </ul>

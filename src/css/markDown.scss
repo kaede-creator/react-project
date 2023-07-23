@@ -1,0 +1,61 @@
+@import "../App.scss";
+.markDown_wrap{
+    h1{
+        font-size: 25px;
+        margin-bottom: 20px;       
+    }
+
+    .markDown_preview_title{
+        margin-bottom: 20px;       
+    }
+
+    
+    .CodeMirror .cm-spell-error:not(.cm-url):not(.cm-comment):not(.cm-tag):not(.cm-word){
+        background-color: transparent;
+    }
+
+    .text{
+        margin-top: 20px;
+        text-align: right;
+    }
+
+    .markDown_preview_wrap{
+        border: 1px solid #ddd;
+        padding: 10px;
+    
+        blockquote{
+            color: #7f8c8d;
+            padding-left: 20px;
+            position: relative;
+        }
+    
+        blockquote::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3px;
+            border-radius: 5px;
+            height: 100%;
+            background-color: #7f8c8d;
+        }
+
+        ul, ol{
+            padding-left: 20px;
+            li{
+                list-style: disc;
+            }
+        }
+
+        ol{
+            li{
+                list-style: decimal;
+            }
+        }
+
+        p a{
+            text-decoration: underline;
+            color: $mainColor;
+        }
+    }
+}

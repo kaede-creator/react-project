@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap");
+body {
+  font-family: "Kiwi Maru", serif;
+}
+
+main {
+  padding: 50px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.others_wrap ul,
+.bookIndex_wrap ul,
+.top_wrap ul {
+  padding-left: 30px;
+}
+
+.others_wrap li,
+.bookIndex_wrap li {
+  list-style: auto;
+}
+
+.others_wrap li a:hover,
+.bookIndex_wrap li a:hover,
+.bookIndex_wrap a:hover,
+.top_wrap li a:hover {
+  color: --main-color;
+}
+
+.top_sub_wrap {
+  background: #f0fdfa;
+  box-shadow: 1px 1px 4px 1px #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  width: 70%;
+}
+
+.top_wrap h1 {
+  font-weight: bold;
+}
+
+.markDown_wrap h1 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.markDown_wrap .markDown_preview_title {
+  margin-bottom: 20px;
+}
+.markDown_wrap .CodeMirror .cm-spell-error:not(.cm-url):not(.cm-comment):not(.cm-tag):not(.cm-word) {
+  background-color: transparent;
+}
+.markDown_wrap .text {
+  margin-top: 20px;
+  text-align: right;
+}
+.markDown_wrap .markDown_preview_wrap {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.markDown_wrap .markDown_preview_wrap blockquote {
+  color: #7f8c8d;
+  padding-left: 20px;
+  position: relative;
+}
+.markDown_wrap .markDown_preview_wrap blockquote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  border-radius: 5px;
+  height: 100%;
+  background-color: #7f8c8d;
+}
+.markDown_wrap .markDown_preview_wrap ul, .markDown_wrap .markDown_preview_wrap ol {
+  padding-left: 20px;
+}
+.markDown_wrap .markDown_preview_wrap ul li, .markDown_wrap .markDown_preview_wrap ol li {
+  list-style: disc;
+}
+.markDown_wrap .markDown_preview_wrap ol li {
+  list-style: decimal;
+}
+.markDown_wrap .markDown_preview_wrap p a {
+  text-decoration: underline;
+  color: #8CBEB2;
+}/*# sourceMappingURL=markDown.css.map */
