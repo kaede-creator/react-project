@@ -10,11 +10,10 @@ const BookDetail = (props) => {
   // const text = comment.replace(/\n/g, '<br>')
   return (
     <>
-    <div className='bookIndex_wrap'>
-      <p className='mb-2'>題名: {book.title} </p>
-      <p style={{whiteSpace: 'pre-line'}}>{book.comment} </p>
-      <a href='/react-project' className='my-4 inline-block'>TOPへ</a>
-    </div>
+     <p className='mb-2'>題名: {book.title} </p>
+     <p style={{whiteSpace: 'pre-line'}}>{book.comment} </p>
+     <a href='/react-project'>TOPへ</a>
+     {/* <button onClick={() => this.props.history.goBack()}>戻る</button> */}
     </>
   )
 }

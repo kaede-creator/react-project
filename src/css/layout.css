@@ -1,81 +1,156 @@
-/* body{
-    position: relative;
-} */
-
-header, footer{
-    background-color: var(--main-color);
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap");
+body {
+  font-family: "Kiwi Maru", serif;
 }
 
-header nav,
-footer nav{
-    width: 30%;
-    margin: 0 auto;
+main {
+  padding: 50px;
+  width: 1000px;
+  margin: 0 auto;
 }
 
-header nav ul,
-footer nav ul{
-    align-items: center;
+.App {
+  text-align: center;
 }
 
-header li a,
-footer li a{
-    color: var(--white-color);
-    display: inline-block;
-    padding: 10px;
-    position: relative;
-    margin: 5px 0 10px;
-    text-align: center;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-header li a.active:before,
-footer li a.active:before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    border-bottom: solid 2px var(--white-color);
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-header li a:hover:before,
-footer li a:hover:before{
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 0;
-    border-bottom: solid 2px var(--white-color);
-    transform: translateX(-50%);
-    animation: border_anim .2s linear forwards;
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.others_wrap ul,
+.bookIndex_wrap ul,
+.top_wrap ul {
+  padding-left: 30px;
+}
+
+.others_wrap li,
+.bookIndex_wrap li {
+  list-style: auto;
+}
+
+.others_wrap li a:hover,
+.bookIndex_wrap li a:hover,
+.bookIndex_wrap a:hover,
+.top_wrap li a:hover {
+  color: --main-color;
+}
+
+.top_sub_wrap {
+  background: #f0fdfa;
+  box-shadow: 1px 1px 4px 1px #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  width: 70%;
+}
+
+.top_wrap h1 {
+  font-weight: bold;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
+}
+
+header li button {
+  display: block;
+  padding: 5px;
+  vertical-align: middle;
+  font-size: 12px;
+  background: #F2EBBF;
+  border-radius: 5px;
+}
+
+footer {
+  width: 100%;
+  margin-top: auto;
+}
+
+header, footer {
+  background-color: #8CBEB2;
+}
+header nav, footer nav {
+  width: 30%;
+  margin: 0 auto;
+}
+header nav ul, footer nav ul {
+  align-items: center;
+}
+header nav ul li a, footer nav ul li a {
+  color: #ffffff;
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+  margin: 5px 0 10px;
+  text-align: center;
+}
+header nav ul li a.active:before, footer nav ul li a.active:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-bottom: solid 2px #ffffff;
+}
+header nav ul li a:hover:before, footer nav ul li a:hover:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  border-bottom: solid 2px #ffffff;
+  transform: translateX(-50%);
+  animation: border_anim 0.2s linear forwards;
 }
 
 @keyframes border_anim {
-    0%{
-            width: 0%;
-    }
-    100%{
-            width: 100%;
-    }
-}
-
-header li button{
-    display: block;
-    padding: 5px;
-    vertical-align: middle;
-    font-size: 12px;
-    background: #F2EBBF;
-    border-radius: 5px;
-}
-
-footer{
-    position: absolute;
+  0% {
+    width: 0%;
+  }
+  100% {
     width: 100%;
-    bottom: 0;
+  }
 }
-
-@media (max-width:600px) { 
-    header nav,
-    footer nav{
-        width: 95%;
-    }
- }
+@media (max-width: 600px) {
+  header nav, footer nav {
+    width: 95%;
+  }
+  main {
+    width: 100%;
+    padding: 20px;
+  }
+  .top_sub_wrap {
+    width: 100%;
+  }
+}/*# sourceMappingURL=layout.css.map */

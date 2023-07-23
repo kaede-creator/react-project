@@ -12,6 +12,10 @@
   <style>
     ul { list-style: none; }
     .done { text-decoration: line-through; }
+
+    a:hover{
+      color: #8CBEB2;
+    }
   </style>
 </head>
 <body>
@@ -80,22 +84,25 @@
       }
 
       return(<>
-       {/*eを引数に入れて、inputを変更したときにだけイベントが走る  */} 
-       {/* setItemで現在地を取得して更新する*/} 
-      <input type="text" value={item} onChange={e=>setItem( item => item = e.target.value)} className="border-black"/>
-      <button onClick={addItem}>追加</button>
-      <ul>
-        {/* map()の中にコールバック関数を入れる。これでtodoを取り出せる*/}
-        {/* 配列を入れるわけではないので()で囲む*/}
-        { todos.map(( todo, index ) => (
-          <li>
-            <input type="checkbox" checked={todo.isDone} onChange={ e => handleChange(index, e) } />
-            <span className={todo.isDone && 'done'}>{todo.item}</span>
-            {/* どのキーを消すのか指定する↓*/}
-            <button className="p-0.5 bg-red-500 text-white" onClick={()=>deleteItem(index)}>削除</button>
-          </li>
-          ))}
-      </ul>
+      <div className="p-28">
+        {/*eを引数に入れて、inputを変更したときにだけイベントが走る  */} 
+        {/* setItemで現在地を取得して更新する*/} 
+        <input type="text" value={item} onChange={e=>setItem( item => item = e.target.value)} className="border-gray-800 border-solid border p-2 rounded-md" placeholder="項目名を入力してください"/>
+        <button onClick={addItem} className="p-2 ml-4 bg-gray-300 rounded-md">追加</button>
+        <ul className="my-4">
+          {/* map()の中にコールバック関数を入れる。これでtodoを取り出せる*/}
+          {/* 配列を入れるわけではないので()で囲む*/}
+          { todos.map(( todo, index ) => (
+            <li>
+                <input type="checkbox" checked={todo.isDone} onChange={ e => handleChange(index, e) } className="m-2 p-1" />
+                <span className={todo.isDone && 'done'}>{todo.item}</span>
+              {/* どのキーを消すのか指定する↓*/}
+              <button className="m-2 p-2 bg-red-500 text-white rounded-md" onClick={()=>deleteItem(index)}>削除</button>
+            </li>
+            ))}
+        </ul>
+        <a href="/react-project">TOPへ戻る</a>
+      </div>
       </>)
     }
 

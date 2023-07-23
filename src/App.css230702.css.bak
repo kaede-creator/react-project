@@ -1,9 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap");
-body {
-  font-family: "Kiwi Maru", serif;
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap');
+
+:root{
+  --main-color:#8CBEB2;
+  --white-color: #ffffff;
+  --sub-1-color:#f0fdfa;
 }
 
-main {
+body{
+  font-family: 'Kiwi Maru', serif;
+}
+
+main{
   padding: 50px;
   width: 1000px;
   margin: 0 auto;
@@ -23,6 +30,7 @@ main {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -46,32 +54,28 @@ main {
     transform: rotate(360deg);
   }
 }
+
 .others_wrap ul,
 .bookIndex_wrap ul,
-.top_wrap ul {
+.top_wrap ul{
   padding-left: 30px;
 }
 
 .others_wrap li,
-.bookIndex_wrap li {
+.bookIndex_wrap li{
   list-style: auto;
 }
 
 .others_wrap li a:hover,
 .bookIndex_wrap li a:hover,
-.bookIndex_wrap a:hover,
-.top_wrap li a:hover {
-  color: --main-color;
+.top_wrap li a:hover{
+  color: var(--main-color);
 }
 
-.top_sub_wrap {
-  background: #f0fdfa;
+.top_sub_wrap{
+  background: var(--sub-1-color);
   box-shadow: 1px 1px 4px 1px #ddd;
   padding: 20px;
   border-radius: 10px;
   width: 70%;
 }
-
-.top_wrap h1 {
-  font-weight: bold;
-}/*# sourceMappingURL=App.css.map */

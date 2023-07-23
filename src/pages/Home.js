@@ -9,8 +9,8 @@ const Home = () => {
         <div className="mt-8 top_sub_wrap">
             <h2 className="">そのほか、利用しているもの</h2>
             <ul className="list-disc my-4">
-                <li className="my-2">Tailwind.css（CSS）</li>
-                <li className="my-2"><a href="https://github.com/kaede-creator/react-project" target="_blank">GitHub（ソースコード管理。Private設定中）</a></li>
+                <li className="my-2">Tailwind.css, Sass（scss）</li>
+                <li className="my-2"><a href="https://github.com/kaede-creator/react-project" target="_blank">GitHub（ソースコード管理）</a></li>
                 <li className="my-2">VSCode（コーディング、GitHubへのcomit・pushなど）</li>
             </ul>
         </div>

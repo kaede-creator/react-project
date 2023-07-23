@@ -8,8 +8,14 @@
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+  <style>
+    a:hover{
+      color: #8CBEB2;
+    }
+  </style>
   <div id="app"></div>
   
   <script type="text/babel">
@@ -38,8 +44,11 @@
         getDogImage()
       }, [])
       return(<>
-      <button onClick={getDogImage}>画像を取得</button>
-      <img src={image} />
+      <div className="p-28">
+        <button onClick={getDogImage} className="p-2 mb-4 mr-4 bg-gray-300 rounded-md block">画像を取得</button>
+        <img src={image} className="mb-4"/>
+      <a href="/react-project">TOPへ戻る</a>
+      </div>
       </>)
     }
 
@@ -47,6 +56,5 @@
     <DogApi />
     </>)
   </script>
-
 </body>
 </html>
