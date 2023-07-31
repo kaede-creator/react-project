@@ -4,8 +4,7 @@ const Others= () => {
 
   return (<>
     <Outlet />
-    <div className='others_wrap fadeIn'>
-      <h1 className='mb-6'>その他</h1>
+    <div className='others_wrap'>
       <p>その他のreactで制作したアプリケーションは以下の通りです。</p>
       <ul className='my-4'>
         <li className='my-2'>
